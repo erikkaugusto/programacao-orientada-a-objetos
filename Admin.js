@@ -5,6 +5,10 @@ export default class Admin extends User { // Classe admin herda/se estende de Us
         super(nome, email, nascimento, role, ativo); // User é um superclasse de Admin e Admin é uma subclasse de User
     }
 
+    exibirInfos() {
+        return `${this.nome}, ${this.role}, ${this.ativo}`;
+    }
+
     criarCurso(nomeDoCurso, vagas) {
         return `Curso de ${nomeDoCurso} criado com ${vagas} vagas`;
     }
